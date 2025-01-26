@@ -2,18 +2,20 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const userRoutes = require("./routes/user");
 
 const app = express();
 
 // Middleware
 app.use(express.json());
 app.use(cors());
+app.use("/api/user", userRoutes);
 
 // Database Connection
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected Successfully!!!"))
-  .catch((err) => console.error("❌ MongoDB Connection Error:", err));
+  .then(() => console.log("MongoDB Connected Successfully!!!"))
+  .catch((err) => console.error("MongoDB Connection Error:", err));
 
 // Test Route
 app.get("/", (req, res) => {
