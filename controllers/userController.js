@@ -5,14 +5,14 @@ const createToken = (_id) => {
   return jwt.sign({ _id }, process.env.SECRET, { expiresIn: "3d" });
 };
 
-//login user
+// Login user
 const loginUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
     const user = await User.login(email, password);
 
-    //create a token
+    // Create a token
     const token = createToken(user._id);
 
     res.status(200).json({ email, token });
@@ -21,7 +21,7 @@ const loginUser = async (req, res) => {
   }
 };
 
-//signup user
+// Signup user
 const signupUser = async (req, res) => {
   const { firstname, lastname, username, email, password } = req.body;
 
@@ -34,7 +34,7 @@ const signupUser = async (req, res) => {
       password
     );
 
-    //create a token
+    // Create a token
     const token = createToken(user._id);
 
     res.status(200).json({ firstname, lastname, username, email, token });
