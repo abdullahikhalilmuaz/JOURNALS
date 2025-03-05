@@ -1,8 +1,7 @@
-require("dotenv").config(); // Add this line at the top
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const multer = require("multer");
 const path = require("path");
 
 const PORT = process.env.PORT || 5000;
@@ -12,6 +11,7 @@ const userRoutes = require("./routes/user");
 const newsRoutes = require("./routes/newsRoutes");
 const collaborationRoutes = require("./routes/collaborationRoutes");
 const messageRoute = require("./routes/messageRoutes");
+const journalRoutes = require("./routes/journalRoutes");
 
 const app = express();
 
@@ -27,14 +27,17 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.get("/", (req, res) => {
   res.json({ message: `server started on port ${PORT}` });
 });
+
+// Use routes
 app.use("/api/user", userRoutes);
 app.use("/api/news", newsRoutes);
 app.use("/api/collaboration", collaborationRoutes);
 app.use("/api", messageRoute);
+app.use("/api/journals", journalRoutes);
 
 // Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI) // Ensure this line is correct
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB Connected Successfully!"))
   .catch((err) => console.error("❌ MongoDB Connection Error:", err));
 

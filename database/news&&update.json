@@ -52,6 +52,17 @@
         },
         "comment": "what kind of comment is that",
         "date": "2025-01-31T08:05:07.289Z"
+      },
+      {
+        "user": {
+          "email": {
+            "email": "lee@le.com",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MyNjk1Y2Y2ZmMxZmVjYzBiMmU3YzkiLCJpYXQiOjE3NDA5OTIwMTcsImV4cCI6MTc0MTI1MTIxN30.tql5Y9z6F1cZTjWe1y2PV1OQW4eZYbvHzz03_zBIxhg"
+          },
+          "username": "JohnDoe"
+        },
+        "comment": "that is so cool",
+        "date": "2025-03-03T10:12:41.188Z"
       }
     ]
   },
@@ -102,8 +113,24 @@
     "date": "2025-01-30T06:32:31.980Z",
     "image": "http://localhost:5000/public/uploads/img3.jpg",
     "body": "Celebrating the post of the year at star event arena",
-    "likes": [],
-    "comments": []
+    "likes": [
+      {
+        "userId": "someUserId"
+      }
+    ],
+    "comments": [
+      {
+        "user": {
+          "email": {
+            "email": "lee@le.com",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MyNjk1Y2Y2ZmMxZmVjYzBiMmU3YzkiLCJpYXQiOjE3NDA5OTIwMTcsImV4cCI6MTc0MTI1MTIxN30.tql5Y9z6F1cZTjWe1y2PV1OQW4eZYbvHzz03_zBIxhg"
+          },
+          "username": "JohnDoe"
+        },
+        "comment": "woaj",
+        "date": "2025-03-03T10:12:28.487Z"
+      }
+    ]
   },
   {
     "user": {
@@ -113,8 +140,24 @@
     "date": "2025-01-30T06:32:31.980Z",
     "image": "http://localhost:5000/public/uploads/img4.jpg",
     "body": "Celebrating the post of the year at star event arena",
-    "likes": [],
-    "comments": []
+    "likes": [
+      {
+        "userId": "someUserId"
+      }
+    ],
+    "comments": [
+      {
+        "user": {
+          "email": {
+            "email": "lee@le.com",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2MyNjk1Y2Y2ZmMxZmVjYzBiMmU3YzkiLCJpYXQiOjE3NDA5OTIwMTcsImV4cCI6MTc0MTI1MTIxN30.tql5Y9z6F1cZTjWe1y2PV1OQW4eZYbvHzz03_zBIxhg"
+          },
+          "username": "JohnDoe"
+        },
+        "comment": "comment",
+        "date": "2025-03-03T10:13:07.745Z"
+      }
+    ]
   },
   {
     "user": {
@@ -212,7 +255,11 @@
     "date": "2025-01-30T06:32:31.980Z",
     "image": "http://localhost:5000/public/uploads/img11.jpg",
     "body": "Celebrating the post of the year at star event arena",
-    "likes": [],
+    "likes": [
+      {
+        "userId": "someUserId"
+      }
+    ],
     "comments": [
       {
         "user": {
@@ -299,5 +346,25 @@
         "date": "2025-01-31T10:27:22.585Z"
       }
     ]
+  },
+  {
+    "user": {
+      "email": "lee@le.com"
+    },
+    "date": "2025-03-04T20:28:08.329Z",
+    "image": "http://localhost:5000/public/uploads/1741120088224-IMG-20250215-WA0059.jpg",
+    "body": "meanwhile at the event",
+    "likes": [],
+    "comments": []
+  },
+  {
+    "user": {
+      "email": "lee@le.com"
+    },
+    "date": "2025-03-05T06:31:58.254Z",
+    "image": null,
+    "body": "something",
+    "likes": [],
+    "comments": []
   }
 ]
