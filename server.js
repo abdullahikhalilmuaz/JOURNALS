@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 // Import routes
 const userRoutes = require("./routes/user");
@@ -12,6 +12,7 @@ const newsRoutes = require("./routes/newsRoutes");
 const collaborationRoutes = require("./routes/collaborationRoutes");
 const messageRoute = require("./routes/messageRoutes");
 const journalRoutes = require("./routes/journalRoutes");
+const eventRoutes = require("./routes/eventRoutes"); // Import event routes
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use("/api/news", newsRoutes);
 app.use("/api/collaboration", collaborationRoutes);
 app.use("/api", messageRoute);
 app.use("/api/journals", journalRoutes);
+app.use("/api/events", eventRoutes); // Add event routes
 
 // Connect to MongoDB
 mongoose
